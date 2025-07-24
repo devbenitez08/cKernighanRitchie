@@ -17,12 +17,12 @@ void main()
 
 	while ((character = getchar()) != '+') {
 	
-		newCharacter++;	//cuantos caracteres hay en el texto
+		newCharacter++;	//contador de caracteres
 
 		if (character == '\n')	//numero de lineas
 			++newLine;
 		if (character == ' ' || character == '\n' || character == '\t')
-			state = OUT;
+			state = OUT;  //fin de una palabra
 		else if (state == OUT) {
 			state = INT;
 			newWord++;	//numero de palabras
